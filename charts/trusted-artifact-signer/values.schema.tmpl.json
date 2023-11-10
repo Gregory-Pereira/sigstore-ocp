@@ -19,7 +19,14 @@
         "configs": {
             "type": "object",
             "properties": {
-                "segment-backup-job":{
+                "sigstore_monitoring": {
+                    "properties": {
+                        "namespace": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "segment_backup_job":{
                     "properties": {
                         "name": {
                             "type": "string"
@@ -42,6 +49,12 @@
                                     "type": "string"
                                 }
                             }
+                        },
+                        "rolebindings": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
                         }
                     }
                 },
@@ -301,8 +314,7 @@
                     },
                     "type": "object"
                 }
-            },
-            "type": "object"
+            }
         },
         "rbac": {
             "properties": {
